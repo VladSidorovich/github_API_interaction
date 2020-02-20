@@ -1,11 +1,11 @@
 import React, {useContext, useEffect, Fragment} from 'react'
 import {GithubContext} from '../context/github/githubContext'
 import {Link} from 'react-router-dom'
-import { Repos } from '../components/Repos'
 
 export const Profile = ({match}) => {
   const {getUser, getRepos, loading, user, repos} = useContext(GithubContext)
-  const urlName = match.params.name
+  const urlName = 'vladilenm'
+  console.log(urlName)
   useEffect(() => {
     getUser(urlName)
     getRepos(urlName)
@@ -76,7 +76,7 @@ export const Profile = ({match}) => {
         </div>
       </div>
 
-      <Repos repos={repos}/>
+      {repos.join()}
     </Fragment>
   )
 }

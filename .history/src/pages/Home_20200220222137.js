@@ -12,10 +12,10 @@ export const Home = () => {
 
             <div className="row">
                 {loading 
-                    ? <p className="text-center"> Загрузка ... </p>
+                    ? <p className="text-center"> Загрущка ... </p>
                     : users.map(user => (
                             <div className="col-sm-4 mb-4" key={user.id}>
-                                <Card user={user}/>
+                                <Card />
                             </div>
                         )
                     )

@@ -6,6 +6,7 @@ import { Repos } from '../components/Repos'
 export const Profile = ({match}) => {
   const {getUser, getRepos, loading, user, repos} = useContext(GithubContext)
   const urlName = match.params.name
+  console.log(urlName)
   useEffect(() => {
     getUser(urlName)
     getRepos(urlName)
